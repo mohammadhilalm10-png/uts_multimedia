@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teori Warna untuk Desain Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide dark active">
+  <div class="cols">
+    <div>
+      <h1>Teori Warna untuk Desain Digital</h1>
+      <p>Presentasi interaktif: cara warna dibuat, dipadukan, dan dipakai agar desain mudah dibaca.</p>
+      <p><small>DI BUAT OLEH : HUSIN_008 & HILAL_055</small></p>
+    </div>
+    <div class="rgb" role="img" aria-label="Tiga lingkaran merah, hijau, biru yang bertumpuk menjadi putih di tengah"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>Tujuan presentasi</h2>
+  <ul>
+    <li>Memahami model warna RGB dan cara layar menampilkan warna.</li>
+    <li>Memilih kombinasi warna dengan skema harmoni dan aturan 60-30-10.</li>
+    <li>Memeriksa kontras agar teks terbaca oleh semua orang.</li>
+    <li>Membaca keputusan warna pada tiga merek nyata.</li>
+  </ul>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>Apa itu teori warna?</h2>
+  <p>Teori warna adalah kumpulan prinsip tentang bagaimana warna bercampur, berpadu, dan memengaruhi cara orang memahami sebuah tampilan.</p>
+  <p>Dasarnya berasal dari percobaan Isaac Newton dengan prisma: cahaya putih ternyata tersusun dari banyak warna. Ia menerbitkannya dalam <i>Opticks</i> (1704).</p>
+  <p>Di desain digital, teori ini menjawab tiga hal: warna apa yang dipakai, bagaimana memadukannya, dan apakah hasilnya terbaca.</p>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>RGB: warna dari cahaya</h2>
+  <div class="cols">
+    <div>
+      <p>Layar membuat warna dengan mencampur cahaya merah, hijau, dan biru. Tiap kanal bernilai 0 sampai 255. Semua menyala penuh menghasilkan putih. Itu berbeda dari CMYK pada cetak, yang mencampur tinta.</p>
+      <p><b>Coba geser sliderinya.</b></p>
+    </div>
+    <div class="ctl">
+      <div class="preview" id="mixPreview"><span id="mixHex">#808080</span></div>
+      <label>R <input type="range" id="r" min="0" max="255" value="128"><output id="rv">128</output></label>
+      <label>G <input type="range" id="g" min="0" max="255" value="128"><output id="gv">128</output></label>
+      <label>B <input type="range" id="b" min="0" max="255" value="128"><output id="bv">128</output></label>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>Roda warna</h2>
+  <div class="cols">
+    <div class="wheel" role="img" aria-label="Roda warna dari merah, kuning, hijau, cyan, biru, magenta"></div>
+    <div>
+      <p><b>Primer:</b> warna dasar. Roda tradisional memakai merah, kuning, biru. Layar memakai merah, hijau, biru.</p>
+      <p><b>Sekunder:</b> hasil campuran dua primer, misalnya oranye, hijau, ungu.</p>
+      <p><b>Tersier:</b> campuran primer dan sekunder di sebelahnya, misalnya biru kehijauan.</p>
+      <p>Di CSS, posisi di roda disebut <i>hue</i> (0 sampai 360 derajat). Merah 0, hijau 120, biru 240.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>Skema harmoni</h2>
+  <p>Arahkan kursor ke tiap kotak warna.</p>
+  <div class="harm"><b>Analogus</b><div class="chips"><i style="--c:hsl(200 70% 45%)"></i><i style="--c:hsl(230 70% 50%)"></i><i style="--c:hsl(260 65% 55%)"></i></div><span>Warna bertetangga di roda. Tenang dan menyatu.</span></div>
+  <div class="harm"><b>Komplementer</b><div class="chips"><i style="--c:hsl(8 100% 65%)"></i><i style="--c:hsl(176 62% 42%)"></i></div><span>Warna berseberangan. Kontras kuat untuk tombol dan sorotan.</span></div>
+  <div class="harm"><b>Triadik</b><div class="chips"><i style="--c:hsl(5 80% 55%)"></i><i style="--c:hsl(125 55% 40%)"></i><i style="--c:hsl(245 70% 60%)"></i></div><span>Tiga warna berjarak sama. Ceria dan seimbang bila satu dominan.</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>Psikologi warna</h2>
+  <div class="psy">
+    <div style="--c:#e0312b"><h3>Merah</h3><p>Energi, urgensi, peringatan.</p></div>
+    <div style="--c:#2f6fe4"><h3>Biru</h3><p>Tenang, tepercaya, profesional.</p></div>
+    <div style="--c:#2bb56a"><h3>Hijau</h3><p>Alam, pertumbuhan, berhasil.</p></div>
+    <div style="--c:#ffc93c"><h3>Kuning</h3><p>Ceria, perhatian, hati-hati.</p></div>
+    <div style="--c:#7a4bd6"><h3>Ungu</h3><p>Kreatif, mewah, imajinatif.</p></div>
+    <div style="--c:#151a33"><h3>Hitam</h3><p>Elegan, tegas, formal.</p></div>
+  </div>
+  <p class="src">Catatan: makna warna berbeda antarbudaya dan bukan aturan pasti (Elliot &amp; Maier, 2014).</p>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>Kontras dan aksesibilitas</h2>
+  <p>Teks harus kontras dengan latarnya. Standar WCAG 2.1 level AA meminta rasio minimal 4,5 : 1 untuk teks biasa. Pilih warna di bawah.</p>
+  <div class="pick">
+    <label>Teks <input type="color" id="fg" value="#ffffff"></label>
+    <label>Latar <input type="color" id="bg" value="#26337a"></label>
+    <span id="ratio" style="font-weight:700;font-size:1.3rem"></span>
+    <span id="verdict" class="badge"></span>
+  </div>
+  <div class="preview" id="conPreview">Contoh teks di atas latar ini</div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>Aturan 60-30-10</h2>
+  <p>Bagi warna menurut perannya agar tampilan seimbang.</p>
+  <div class="split">
+    <span style="flex:60;background:#26337a;color:#fff">60% warna dominan (latar)</span>
+    <span style="flex:30;background:#2bb5a0;color:#151a33">30% sekunder</span>
+    <span style="flex:10;background:#ff5a4e;color:#151a33">10% aksen</span>
+  </div>
+  <p>Warna dominan membentuk suasana, sekunder mendukung bagian kedua, aksen dipakai hemat untuk tombol atau hal yang ingin disorot. Presentasi ini juga memakai pola tersebut.</p>
+</section>
+
+<!-- 10 -->
+<section class="slide dark case">
+  <h2>Studi kasus 1: Facebook</h2>
+  <div class="chips"><i style="--c:#1877f2"></i><i style="--c:#fff"></i></div>
+  <p><b>Keputusan:</b> biru sebagai warna identitas utama.</p>
+  <p><b>Alasan:</b> Mark Zuckerberg dilaporkan media mengalami buta warna merah-hijau sehingga biru paling jelas baginya. Biru juga lazim dikaitkan dengan rasa percaya.</p>
+  <p><b>Pelajaran:</b> satu warna konsisten membuat merek mudah dikenali, dan kebutuhan pengguna (keterbacaan) bisa menjadi dasar pilihan warna.</p>
+</section>
+
+<!-- 11 -->
+<section class="slide dark case">
+  <h2>Studi kasus 2: McDonald's</h2>
+  <div class="chips"><i style="--c:#da291c"></i><i style="--c:#ffc72c"></i></div>
+  <p><b>Keputusan:</b> merah dan kuning pada logo, kemasan, dan restoran.</p>
+  <p><b>Alasan:</b> warna hangat menarik perhatian dari jauh. Dalam literatur pemasaran, merah dan kuning sering dikaitkan dengan energi dan selera makan, meski efeknya bukan jaminan.</p>
+  <p><b>Pelajaran:</b> pasangan warna kontras tinggi mudah terlihat, cocok untuk bisnis yang butuh dikenali cepat.</p>
+</section>
+
+<!-- 12 -->
+<section class="slide dark case">
+  <h2>Studi kasus 3: Instagram</h2>
+  <div class="chips"><i style="--c:#833ab4"></i><i style="--c:#fd1d1d"></i><i style="--c:#fcb045"></i></div>
+  <p><b>Keputusan:</b> pada 2016 Instagram mengganti ikon kamera bergaya realistis dengan ikon sederhana berlatar gradasi ungu, merah, oranye.</p>
+  <p><b>Alasan:</b> aplikasinya sudah berisi foto dari banyak gaya, sehingga identitas dibuat lebih sederhana dan fleksibel.</p>
+  <p><b>Pelajaran:</b> gradasi bisa menjadi identitas bila dipakai konsisten dan bentuknya tetap sederhana.</p>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <h2>Kuis singkat</h2>
+  <div id="quiz"></div>
+</section>
+
+<!-- 14 -->
+<section class="slide dark">
+  <h2>Kesimpulan dan sumber</h2>
+  <ul>
+    <li>Layar mencampur cahaya RGB, cetak mencampur tinta CMYK.</li>
+    <li>Skema harmoni dan aturan 60-30-10 membantu memilih kombinasi.</li>
+    <li>Kontras minimal 4,5 : 1 membuat teks terbaca oleh lebih banyak orang.</li>
+    <li>Merek besar memilih warna dengan alasan yang jelas dan memakainya konsisten.</li>
+  </ul>
+  <p class="src">
+    Itten, J. (1961). <i>The Art of Color</i>. Reinhold.<br>
+    Newton, I. (1704). <i>Opticks</i>.<br>
+    Elliot, A. J. &amp; Maier, M. A. (2014). Color psychology. <i>Annual Review of Psychology</i>, 65, 95-120.<br>
+    W3C. WCAG 2.1, Contrast (Minimum): <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">w3.org/TR/WCAG21</a><br>
+    WebAIM Contrast Checker: <a href="https://webaim.org/resources/contrastchecker/">webaim.org/resources/contrastchecker</a><br>
+    MDN Web Docs, CSS color: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">developer.mozilla.org</a>
+  </p>
+</section>
+
+<div class="progress" id="bar"></div>
+<nav class="ctrl">
+  <button id="prev">Sebelumnya</button>
+  <span id="count">1 / 14</span>
+  <button id="next">Berikutnya</button>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>
